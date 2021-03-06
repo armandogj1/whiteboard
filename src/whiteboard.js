@@ -1,7 +1,11 @@
 'use strict';
 
+console.log('loaded onto page');
 // grab canvas and create a 2d context
-const whiteboard = document.getElementById('whiteboard');
+const whiteboard = document.createElement('canvas');
+whiteboard.id = 'whiteboard';
+whiteboard.height = document.body.innerHeight;
+whiteboard.width = document.body.innerWidth;
 const ctx = whiteboard.getContext('2d');
 
 // initialize global variables
@@ -40,6 +44,7 @@ function handleDrawStop(e) {
   ctx.closePath();
 }
 
+document.body.prepend(whiteboard);
 document.body.addEventListener('mousedown', handleDrawStart);
 document.body.addEventListener('mousemove', handleDraw);
 document.body.addEventListener('mouseup', handleDrawStop);

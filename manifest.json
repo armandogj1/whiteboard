@@ -1,6 +1,14 @@
 {
   "name": "Whiteboard Extension",
   "description": "Drawing Tool to Diagram Toy Problems",
-  "version": "1.0",
-  "manifest_version": 3
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["public/style.css"],
+      "js": ["src/whiteboard.js"]
+    }
+  ],
+  "permissions": ["activeTab"]
 }
