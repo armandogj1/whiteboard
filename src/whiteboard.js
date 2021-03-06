@@ -1,6 +1,7 @@
 'use strict';
 
-console.log('loaded onto page');
+console.log('hello');
+
 // grab canvas and create a 2d context
 const whiteboard = document.createElement('canvas');
 whiteboard.id = 'whiteboard';
