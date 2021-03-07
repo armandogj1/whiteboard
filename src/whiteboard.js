@@ -62,13 +62,15 @@ function createCanvas(message, sender, sendResponse) {
   } else {
     console.log('else triggered');
     const canvas = document.getElementById('whiteboard');
+    const menu = document.getElementById('whiteboard-menu');
     canvas.remove();
+    menu.remove();
   }
 }
 
 function createMenu(ctx) {
   const menu = document.createElement('div');
-  menu.id = 'menu';
+  menu.id = 'whiteboard-menu';
   const buttons = Array(3)
     .fill(1)
     .forEach((el, i) => {
