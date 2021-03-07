@@ -3,6 +3,9 @@
   "description": "Drawing Tool to Diagram Toy Problems",
   "version": "0.1.0",
   "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
@@ -10,5 +13,13 @@
       "js": ["src/whiteboard.js"]
     }
   ],
+  "action": {
+    "default_icon": {
+      "16": "logo.png",
+      "32": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    }
+  },
   "permissions": ["activeTab"]
 }
